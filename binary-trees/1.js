@@ -6,7 +6,7 @@ You may assume that it is a full binary tree (ie, each node other than the leave
 var q1 = (function() {
     return {
         exec: function() {
-            alert('first called..');
+            return 'First question solution';
         }
     };
 }());
