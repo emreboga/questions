@@ -9,12 +9,25 @@
 <body>
 <div>
     Binary-trees:
-    <div id="binary-tree-q1"></div>
-    <div id="binary-tree-q2"></div>
+    <div id="binary-tree-q1">
+        <button id="button-q1">Q-1</button>
+        <div id="binary-tree-q1-result"></div>
+    </div>
+    <div id="binary-tree-q2">
+        <button id="button-q2">Q-2</button>
+        <div id="binary-tree-q2-result"></div>
+    </div>
 </div>
 <script type="text/javascript">
-    $('#binary-tree-q1').html(q1.exec());
-    $('#binary-tree-q2').html(q2.exec());
+    $('#binary-tree-q1').on('click', function() {
+        var result = JSON.stringify(q1.exec());
+        $('#binary-tree-q1-result').html(result);
+    });
+    $('#binary-tree-q2').on('click', function() {
+        var result = JSON.stringify(q2.exec());
+        $('#binary-tree-q2-result').html(result);
+    });
+    //$('#binary-tree-q2-result').html(q2.exec());
 </script>
 </body>
 </html>
