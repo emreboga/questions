@@ -31,7 +31,9 @@ var q1 = (function() {
             lastAddedNode;
 
         // Check if node or both children are not defined
-        if (!node || (!node.right && !node.left)) {
+        // children[0] -> left
+        // children[1] -> right
+        if (!node || (node.children.length < 2)) {
             return;
         }
 
@@ -46,18 +48,18 @@ var q1 = (function() {
             // Get the next in the queue
             var n = q.dequeue();
             // Check left and right to enqueue accordingly
-            if (n.left) {
-                q.enqueue(n.left);
-                lastAddedNode = n.left;
+            if (n.children[0]) {
+                q.enqueue(n.children[0]);
+                lastAddedNode = n.children[0];
             }
-            if (n.right) {
-                q.enqueue(n.right);
-                lastAddedNode = n.right;
+            if (n.children[1]) {
+                q.enqueue(n.children[1]);
+                lastAddedNode = n.children[1];
             }
             // Check if level needs to be incremented
             // set nextRight otherwise
             if (!n.incLevel) {
-                n.nextRight = q.peek();
+                n.nextRight = q.peek().id;
             } else {
                 lastAddedNode.incLevel = true;
             }
@@ -66,7 +68,7 @@ var q1 = (function() {
     }
     return {
         exec: function() {
-            return insertNextRight(tree);
+            return insertNextRight(test.btree);
         }
     };
 }());

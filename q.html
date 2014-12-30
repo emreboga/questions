@@ -2,7 +2,9 @@
 <html>
 <head>
     <title>Interview Questions</title>
+    <link rel="stylesheet" href="lib/themes/default/style.min.css" />
     <script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="lib/jstree.min.js"></script>
     <script type="text/javascript" src="binary-trees/core.js"></script>
     <script type="text/javascript" src="binary-trees/1.js"></script>
     <script type="text/javascript" src="binary-trees/2.js"></script>
@@ -21,6 +23,7 @@
 </div>
 <script type="text/javascript">
     $('#binary-tree-q1').on('click', function() {
+        $('#binary-tree-q1-result').jstree();
         var result = JSON.stringify(q1.exec());
         $('#binary-tree-q1-result').html(result);
     });
