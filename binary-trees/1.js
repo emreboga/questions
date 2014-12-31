@@ -9,22 +9,12 @@ var node = {
 */
 
 var q1 = (function() {
-    // Queue implementation
-    function Queue() {
-        this.q = [];
-    }
-    Queue.prototype.enqueue = function(item) {
-        this.q.unshift(item);
+    return {
+        exec: function() {
+            return insertNextRight(input.btree);
+        }
     };
-    Queue.prototype.dequeue = function() {
-        return this.q.splice(this.q.length - 1, 1)[0];
-    };
-    Queue.prototype.isEmpty = function() {
-        return this.q.length === 0;
-    };
-    Queue.prototype.peek = function() {
-        return this.q[this.q.length - 1];
-    };
+
     function insertNextRight(node) {
         // Variable decleration
         var q,
@@ -48,13 +38,15 @@ var q1 = (function() {
             // Get the next in the queue
             var n = q.dequeue();
             // Check left and right to enqueue accordingly
-            if (n.children[0]) {
-                q.enqueue(n.children[0]);
-                lastAddedNode = n.children[0];
-            }
-            if (n.children[1]) {
-                q.enqueue(n.children[1]);
-                lastAddedNode = n.children[1];
+            if (n.children && n.children.length > 0) {
+                if (n.children[0]) {
+                    q.enqueue(n.children[0]);
+                    lastAddedNode = n.children[0];
+                }
+                if (n.children[1]) {
+                    q.enqueue(n.children[1]);
+                    lastAddedNode = n.children[1];
+                }
             }
             // Check if level needs to be incremented
             // set nextRight otherwise
@@ -66,9 +58,4 @@ var q1 = (function() {
         }
         return node;
     }
-    return {
-        exec: function() {
-            return insertNextRight(test.btree);
-        }
-    };
 }());

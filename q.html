@@ -5,33 +5,39 @@
     <link rel="stylesheet" href="lib/themes/default/style.min.css" />
     <script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="lib/jstree.min.js"></script>
+    <script type="text/javascript" src="binary-trees/input.js"></script>
     <script type="text/javascript" src="binary-trees/core.js"></script>
     <script type="text/javascript" src="binary-trees/1.js"></script>
     <script type="text/javascript" src="binary-trees/2.js"></script>
+    <style type="text/css">
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <div>
     Binary-trees:
     <div id="binary-tree-q1">
         <button id="button-q1">Q-1</button>
-        <div id="binary-tree-q1-result"></div>
+        <pre id="binary-tree-q1-result" class="hidden"></pre>
     </div>
     <div id="binary-tree-q2">
         <button id="button-q2">Q-2</button>
-        <div id="binary-tree-q2-result"></div>
+        <div id="binary-tree-q2-result" class="hidden"></div>
     </div>
 </div>
 <script type="text/javascript">
     $('#binary-tree-q1').on('click', function() {
-        $('#binary-tree-q1-result').jstree();
-        var result = JSON.stringify(q1.exec());
+        var result = JSON.stringify(q1.exec(), null, 2);
         $('#binary-tree-q1-result').html(result);
+        $('#binary-tree-q1-result').toggleClass('hidden');
     });
     $('#binary-tree-q2').on('click', function() {
-        var result = JSON.stringify(q2.exec());
+        var result = JSON.stringify(q2.exec(), null, 2);
         $('#binary-tree-q2-result').html(result);
+        $('#binary-tree-q2-result').toggleClass('hidden');
     });
-    //$('#binary-tree-q2-result').html(q2.exec());
 </script>
 </body>
 </html>
