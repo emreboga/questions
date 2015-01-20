@@ -72,5 +72,11 @@ var input = {
                 ]
             }
         ]
-    }
+    },
+    prices: [2, 1, 2, 1, 0, 1, 3],
+    intArray: [12, 121],
+    digits: '11\n123456789\n114108089\n110110015\n121\n33\n44\n55\n66\n77\n88\n106108048',
+    unsignedIntegers: '3\n2147483647\n1\n0',
+    utopianTree: '2\n2\n3',
+    isFibo: '3\n5\n7\n8'
 };

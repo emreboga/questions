@@ -5,10 +5,16 @@
     <link rel="stylesheet" href="lib/themes/default/style.min.css" />
     <script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="lib/jstree.min.js"></script>
-    <script type="text/javascript" src="binary-trees/input.js"></script>
-    <script type="text/javascript" src="binary-trees/core.js"></script>
-    <script type="text/javascript" src="binary-trees/1.js"></script>
-    <script type="text/javascript" src="binary-trees/2.js"></script>
+    <script type="text/javascript" src="scripts/input.js"></script>
+    <script type="text/javascript" src="scripts/core.js"></script>
+    <script type="text/javascript" src="scripts/1.js"></script>
+    <script type="text/javascript" src="scripts/2.js"></script>
+    <script type="text/javascript" src="scripts/3.js"></script>
+    <script type="text/javascript" src="scripts/4.js"></script>
+    <script type="text/javascript" src="scripts/5.js"></script>
+    <script type="text/javascript" src="scripts/6.js"></script>
+    <script type="text/javascript" src="scripts/7.js"></script>
+    <script type="text/javascript" src="scripts/8.js"></script>
     <style type="text/css">
         .hidden {
             display: none;
@@ -17,14 +23,37 @@
 </head>
 <body>
 <div>
-    Binary-trees:
     <div id="binary-tree-q1">
-        <button id="button-q1">Q-1</button>
+        <button id="button-q1">BST-Q-1</button>
         <pre id="binary-tree-q1-result" class="hidden"></pre>
     </div>
     <div id="binary-tree-q2">
-        <button id="button-q2">Q-2</button>
+        <button id="button-q2">BST-Q-2</button>
         <div id="binary-tree-q2-result" class="hidden"></div>
+    </div>
+    <div id="best-time-tobuy-and-sell-stock">
+        <button id="button-best-time-tobuy-and-sell-stock">best time to buy and sell stock</button>
+        <pre id="result-best-time-tobuy-and-sell-stock" class="hidden"></pre>
+    </div>
+    <div id="largest-number">
+        <button id="button-largest-number">largest number</button>
+        <pre id="result-largest-number" class="hidden"></pre>
+    </div>
+    <div id="find-digits">
+        <button id="button-find-digits">digits</button>
+        <pre id="result-find-digits" class="hidden"></pre>
+    </div>
+    <div id="flipping-bits">
+        <button id="button-flipping-bits">flipping bits</button>
+        <pre id="result-flipping-bits" class="hidden"></pre>
+    </div>
+    <div id="utopian-tree">
+        <button id="button-utopian-tree">utopian tree</button>
+        <pre id="result-utopian-tree" class="hidden"></pre>
+    </div>
+    <div id="is-fibonacci">
+        <button id="button-is-fibonacci">is fibonacci</button>
+        <pre id="result-is-fibonacci" class="hidden"></pre>
     </div>
 </div>
 <script type="text/javascript">
@@ -37,6 +66,36 @@
         var result = JSON.stringify(q2.exec(), null, 2);
         $('#binary-tree-q2-result').html(result);
         $('#binary-tree-q2-result').toggleClass('hidden');
+    });
+    $('#button-best-time-tobuy-and-sell-stock').on('click', function() {
+        var result = q3.exec();
+        $('#result-best-time-tobuy-and-sell-stock').html(result);
+        $('#result-best-time-tobuy-and-sell-stock').toggleClass('hidden');
+    });
+    $('#button-largest-number').on('click', function() {
+        var result = q4.exec();
+        $('#result-largest-number').html(result);
+        $('#result-largest-number').toggleClass('hidden');
+    });
+    $('#button-find-digits').on('click', function() {
+        var result = q5.exec();
+        $('#result-find-digits').html(result);
+        $('#result-find-digits').toggleClass('hidden');
+    });
+    $('#button-flipping-bits').on('click', function() {
+        var result = q6.exec();
+        $('#result-flipping-bits').html(result);
+        $('#result-flipping-bits').toggleClass('hidden');
+    });
+    $('#button-utopian-tree').on('click', function() {
+        var result = q7.exec();
+        $('#result-utopian-tree').html(result);
+        $('#result-utopian-tree').toggleClass('hidden');
+    });
+    $('#button-is-fibonacci').on('click', function() {
+        var result = q8.exec();
+        $('#result-is-fibonacci').html(result);
+        $('#result-is-fibonacci').toggleClass('hidden');
     });
 </script>
 </body>
