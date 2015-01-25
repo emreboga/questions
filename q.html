@@ -15,6 +15,10 @@
     <script type="text/javascript" src="scripts/6.js"></script>
     <script type="text/javascript" src="scripts/7.js"></script>
     <script type="text/javascript" src="scripts/8.js"></script>
+    <script type="text/javascript" src="scripts/9.js"></script>
+    <script type="text/javascript" src="scripts/10.js"></script>
+    <script type="text/javascript" src="scripts/11.js"></script>
+    <script type="text/javascript" src="scripts/12.js"></script>
     <style type="text/css">
         .hidden {
             display: none;
@@ -23,13 +27,13 @@
 </head>
 <body>
 <div>
-    <div id="binary-tree-q1">
-        <button id="button-q1">BST-Q-1</button>
-        <pre id="binary-tree-q1-result" class="hidden"></pre>
+    <div id="next-right">
+        <button id="button-next-right">binary tree next right</button>
+        <pre id="result-next-right" class="hidden"></pre>
     </div>
-    <div id="binary-tree-q2">
-        <button id="button-q2">BST-Q-2</button>
-        <div id="binary-tree-q2-result" class="hidden"></div>
+    <div id="max-height">
+        <button id="button-max-height">binary tree maximum height</button>
+        <pre id="result-max-height" class="hidden"></pre>
     </div>
     <div id="best-time-tobuy-and-sell-stock">
         <button id="button-best-time-tobuy-and-sell-stock">best time to buy and sell stock</button>
@@ -55,17 +59,33 @@
         <button id="button-is-fibonacci">is fibonacci</button>
         <pre id="result-is-fibonacci" class="hidden"></pre>
     </div>
+    <div id="angry-children">
+        <button id="button-angry-children">angry children</button>
+        <pre id="result-angry-children" class="hidden"></pre>
+    </div>
+    <div id="word-permutation">
+        <button id="button-word-permutation">word permutation</button>
+        <pre id="result-word-permutation" class="hidden"></pre>
+    </div>
+    <div id="word-combination">
+        <button id="button-word-combination">word combination</button>
+        <pre id="result-word-combination" class="hidden"></pre>
+    </div>
+    <div id="speak-number">
+        <button id="button-speak-number">speak number</button>
+        <pre id="result-speak-number" class="hidden"></pre>
+    </div>
 </div>
 <script type="text/javascript">
-    $('#binary-tree-q1').on('click', function() {
+    $('#button-next-right').on('click', function() {
         var result = JSON.stringify(q1.exec(), null, 2);
-        $('#binary-tree-q1-result').html(result);
-        $('#binary-tree-q1-result').toggleClass('hidden');
+        $('#result-next-right').html(result);
+        $('#result-next-right').toggleClass('hidden');
     });
-    $('#binary-tree-q2').on('click', function() {
-        var result = JSON.stringify(q2.exec(), null, 2);
-        $('#binary-tree-q2-result').html(result);
-        $('#binary-tree-q2-result').toggleClass('hidden');
+    $('#button-max-height').on('click', function() {
+        var result = q2.exec();
+        $('#result-max-height').html(result);
+        $('#result-max-height').toggleClass('hidden');
     });
     $('#button-best-time-tobuy-and-sell-stock').on('click', function() {
         var result = q3.exec();
@@ -96,6 +116,26 @@
         var result = q8.exec();
         $('#result-is-fibonacci').html(result);
         $('#result-is-fibonacci').toggleClass('hidden');
+    });
+    $('#button-angry-children').on('click', function() {
+        var result = q9.exec();
+        $('#result-angry-children').html(result);
+        $('#result-angry-children').toggleClass('hidden');
+    });
+    $('#button-word-permutation').on('click', function() {
+        var result = q10.exec();
+        $('#result-word-permutation').html(result);
+        $('#result-word-permutation').toggleClass('hidden');
+    });
+    $('#button-word-combination').on('click', function() {
+        var result = q11.exec();
+        $('#result-word-combination').html(result);
+        $('#result-word-combination').toggleClass('hidden');
+    });
+    $('#button-speak-number').on('click', function() {
+        var result = q12.exec();
+        $('#result-speak-number').html(result);
+        $('#result-speak-number').toggleClass('hidden');
     });
 </script>
 </body>

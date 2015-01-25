@@ -78,5 +78,9 @@ var input = {
     digits: '11\n123456789\n114108089\n110110015\n121\n33\n44\n55\n66\n77\n88\n106108048',
     unsignedIntegers: '3\n2147483647\n1\n0',
     utopianTree: '2\n2\n3',
-    isFibo: '3\n5\n7\n8'
+    isFibo: '3\n5\n7\n8',
+    angryChildren: '7\n3\n10\n100\n300\n200\n1000\n20\n30',
+    wordPermutation: '1\nabc',
+    wordCombination: '1\nabc',
+    speakNumber: '1\n183456'
 };

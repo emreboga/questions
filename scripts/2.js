@@ -30,8 +30,6 @@ var q2 = (function() {
                         }
                         height += 1;
                     } else {
-                        // We reached to a leaf
-                        // update maxheight if necessary and decrement height
                         if (height > maxheight) {
                             maxheight = height;
                         }
