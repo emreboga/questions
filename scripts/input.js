@@ -82,5 +82,8 @@ var input = {
     angryChildren: '7\n3\n10\n100\n300\n200\n1000\n20\n30',
     wordPermutation: '1\nabc',
     wordCombination: '1\nabc',
-    speakNumber: '1\n183456'
+    speakNumber: '1\n183456',
+    wordament2: '2\nab\ncd',
+    wordament3: '3\nabc\ndef\nghi',
+    balancedBST: '6\n1\n3\n4\n10\n21\n25'
 };

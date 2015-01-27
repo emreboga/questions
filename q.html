@@ -19,6 +19,9 @@
     <script type="text/javascript" src="scripts/10.js"></script>
     <script type="text/javascript" src="scripts/11.js"></script>
     <script type="text/javascript" src="scripts/12.js"></script>
+    <script type="text/javascript" src="scripts/13.js"></script>
+    <script type="text/javascript" src="scripts/14.js"></script>
+    <script type="text/javascript" src="scripts/15.js"></script>
     <style type="text/css">
         .hidden {
             display: none;
@@ -74,6 +77,18 @@
     <div id="speak-number">
         <button id="button-speak-number">speak number</button>
         <pre id="result-speak-number" class="hidden"></pre>
+    </div>
+    <div id="wordament">
+        <button id="button-wordament">wordament</button>
+        <pre id="result-wordament" class="hidden"></pre>
+    </div>
+    <div id="longest-compound-word">
+        <button id="button-longest-compound-word">longest compound word</button>
+        <pre id="result-longest-compound-word" class="hidden"></pre>
+    </div>
+    <div id="balanced-bst">
+        <button id="button-balanced-bst">balanced BST</button>
+        <pre id="result-balanced-bst" class="hidden"></pre>
     </div>
 </div>
 <script type="text/javascript">
@@ -136,6 +151,21 @@
         var result = q12.exec();
         $('#result-speak-number').html(result);
         $('#result-speak-number').toggleClass('hidden');
+    });
+    $('#button-wordament').on('click', function() {
+        var result = q13.exec();
+        $('#result-wordament').html(result.length + '\n' + result.join(', '));
+        $('#result-wordament').toggleClass('hidden');
+    });
+    $('#button-longest-compound-word').on('click', function() {
+        var result = q14.exec();
+        $('#result-longest-compound-word').html(result);
+        $('#result-longest-compound-word').toggleClass('hidden');
+    });
+    $('#button-balanced-bst').on('click', function() {
+        var result = q15.exec();
+        $('#result-balanced-bst').html(result);
+        $('#result-balanced-bst').toggleClass('hidden');
     });
 </script>
 </body>
